@@ -10,11 +10,11 @@ async function fetchDashboardData() {
     lessons,
     schedules
   ] = await Promise.all([
-    fetch("data/teachers_rows.json").then(r => r.json()),
-    fetch("data/students_rows.json").then(r => r.json()),
-    fetch("data/classes_rows.json").then(r => r.json()),
-    fetch("data/lessons_rows.json").then(r => r.json()),
-    fetch("data/lesson_schedule_rows.json").then(r => r.json())
+    fetch("data/TEACHERS_rows.json").then(r => r.json()),
+    fetch("data/STUDENTS_rows.json").then(r => r.json()),
+    fetch("data/CLASSES_rows.json").then(r => r.json()),
+    fetch("data/LESSON_rows.json").then(r => r.json()),
+    fetch("data/LESSON_SCHEDULE_rows.json").then(r => r.json())
   ]);
 
   return {
@@ -62,3 +62,4 @@ async function initDashboard() {
 }
 
 initDashboard();
+
